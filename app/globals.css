@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+}

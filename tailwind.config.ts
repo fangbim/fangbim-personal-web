@@ -13,8 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      clipPath: {
+        mpolygon: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
+      }
+      
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-clip-path'),
+  ],
 }
 export default config

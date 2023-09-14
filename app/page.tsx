@@ -1,11 +1,9 @@
-import TextReavel from "./textReavel";
+import TextReavel from "./components/textReavel";
 
 export default function Home() {
   return (
-    <main className="flex justify-center items-center h-screen">
-      <div>
+    <main>
         <TextReavel/>
-      </div>
     </main>
-  )
-}
+  );
+};

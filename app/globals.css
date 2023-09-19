@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --gradient-1: 167, 243, 208;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,20 +14,27 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --gradient-1: 6, 78, 59;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: radial-gradient(
+    at center top,
+    rgb(var(--gradient-1)),
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  )
     rgb(var(--background-start-rgb));
 }
 
 .char {
   transform: translateY(115px);
+  transition: transform .5s;
+}
+
+#title {
+  transform: translateX(-1300px);
   transition: transform .5s;
 }
